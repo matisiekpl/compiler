@@ -429,7 +429,12 @@ statement
     |   sqlInsertStatement 
     |   sqlUpdateStatement 
     |   sqlDeleteStatement
+    |   sqlInit
     |   ('__asm' | '__asm__') ('volatile' | '__volatile__') '(' (logicalOrExpression (',' logicalOrExpression)*)? (':' (logicalOrExpression (',' logicalOrExpression)*)?)* ')' ';'
+    ;
+
+sqlInit
+    : 'sqlInit;'
     ;
 
 labeledStatement

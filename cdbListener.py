@@ -8,6 +8,15 @@ else:
 # This class defines a complete listener for a parse tree produced by cdbParser.
 class cdbListener(ParseTreeListener):
 
+    # Enter a parse tree produced by cdbParser#parse.
+    def enterParse(self, ctx:cdbParser.ParseContext):
+        pass
+
+    # Exit a parse tree produced by cdbParser#parse.
+    def exitParse(self, ctx:cdbParser.ParseContext):
+        pass
+
+
     # Enter a parse tree produced by cdbParser#primaryExpression.
     def enterPrimaryExpression(self, ctx:cdbParser.PrimaryExpressionContext):
         pass
@@ -716,6 +725,15 @@ class cdbListener(ParseTreeListener):
 
     # Exit a parse tree produced by cdbParser#statement.
     def exitStatement(self, ctx:cdbParser.StatementContext):
+        pass
+
+
+    # Enter a parse tree produced by cdbParser#sqlInit.
+    def enterSqlInit(self, ctx:cdbParser.SqlInitContext):
+        pass
+
+    # Exit a parse tree produced by cdbParser#sqlInit.
+    def exitSqlInit(self, ctx:cdbParser.SqlInitContext):
         pass
 
 
