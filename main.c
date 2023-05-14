@@ -1,0 +1,6 @@
+int main()
+{
+    int i, sum = 0;
+    SELECT a,b FROM a INTO a;
+    return 0;
+}
