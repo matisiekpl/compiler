@@ -5,7 +5,6 @@ from cdbListener import cdbListener
 from cdbParser import cdbParser
 
 input_stream = open('main.c').read()
-print(input_stream)
 lexer = cdbLexer(InputStream(input_stream))
 stream = CommonTokenStream(lexer)
 parser = cdbParser(stream)
@@ -58,6 +57,44 @@ class Listener(cdbListener):
             exit(1);
         }
         """
+
+    def enterSqlInsertStatement(self, ctx: cdbParser.SqlInsertStatementContext):
+        global output
+        line = ctx.getText()
+        line.split('(')
+        table = ctx.children[1]
+        fields = ctx.children[3].children[0].getText()
+        values = ctx.children[5].children[0].getText()
+        output += f"""
+        char *zErrMsg = 0;
+        sql = sqlite3_mprintf("INSERT INTO {table} ({fields}) VALUES ({"'%q', " * len(fields.split(','))});", {values});
+        rc = sqlite3_exec(db, sql, NULL, 0, &zErrMsg);
+        """
+
+    def enterSqlUpdateStatement(self, ctx: cdbParser.SqlUpdateStatementContext):
+        global output
+        line = ctx.getText()
+        line.split('(')
+        table = ctx.children[1]
+        fields = ctx.children[3].children[0].getText()
+        conditions = ctx.children[5].children[0].getText()
+        output += f"""
+        char *zErrMsg = 0;
+        sql = sqlite3_mprintf("UPDATE {table} SET {fields} WHERE {conditions};");
+        rc = sqlite3_exec(db, sql, NULL, 0, &zErrMsg);
+        """
+
+    def enterSqlDeleteStatement(self, ctx:cdbParser.SqlDeleteStatementContext):
+        global output
+        line = ctx.getText()
+        line.split('(')
+        table = ctx.children[1]
+        conditions = ctx.children[3].children[0].getText()
+        output += f"""
+               char *zErrMsg = 0;
+               sql = sqlite3_mprintf("DELETE FROM {table} WHERE {conditions};");
+               rc = sqlite3_exec(db, sql, NULL, 0, &zErrMsg);
+               """
 
 
 listener = Listener()
