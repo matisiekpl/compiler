@@ -1,10 +1,14 @@
+#include <stdio.h>
+#include <sqlite3.h>
+#include <stddef.h>
+
 int main()
 {
     sqlInit;
     int i, sum = 0;
-//    SELECT a,b FROM a INTO a;
-//    INSERT INTO a (a,b) VALUES (c,d);
-//    UPDATE x SET w = 5 WHERE x = 5;
-    DELETE FROM a WHERE x=5;
+    INSERT INTO comments (comment) VALUES ("Hello World");
+    SELECT comment FROM comments INTO wlasnyCallback;
+    UPDATE comments SET comment = 5 WHERE comment = "Hello World";
+    SELECT comment FROM comments INTO wlasnyCallback;
     return 0;
 }
