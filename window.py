@@ -4,7 +4,7 @@ from tkinter.scrolledtext import ScrolledText
 
 from main import transpile
 
-size = 1200
+size = 900
 
 root = tk.Tk()
 

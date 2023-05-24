@@ -33,3 +33,5 @@ python window.py # Uruchamia okno kompilatora
 gcc output.c -o demo -l sqlite3
 ./demo
 ```
+
+![img.png](img.png)
