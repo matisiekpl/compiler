@@ -959,12 +959,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitParse" ):
                 listener.exitParse(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitParse" ):
-                return visitor.visitParse(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -1044,12 +1038,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPrimaryExpression" ):
                 listener.exitPrimaryExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrimaryExpression" ):
-                return visitor.visitPrimaryExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1204,12 +1192,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitGenericSelection" ):
                 listener.exitGenericSelection(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGenericSelection" ):
-                return visitor.visitGenericSelection(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -1269,12 +1251,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGenericAssocList" ):
                 listener.exitGenericAssocList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGenericAssocList" ):
-                return visitor.visitGenericAssocList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1339,12 +1315,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGenericAssociation" ):
                 listener.exitGenericAssociation(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGenericAssociation" ):
-                return visitor.visitGenericAssociation(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1487,12 +1457,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPostfixExpression" ):
                 listener.exitPostfixExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPostfixExpression" ):
-                return visitor.visitPostfixExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1639,12 +1603,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitArgumentExpressionList" ):
                 listener.exitArgumentExpressionList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitArgumentExpressionList" ):
-                return visitor.visitArgumentExpressionList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -1743,12 +1701,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnaryExpression" ):
                 listener.exitUnaryExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnaryExpression" ):
-                return visitor.visitUnaryExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1857,12 +1809,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitUnaryOperator" ):
                 listener.exitUnaryOperator(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnaryOperator" ):
-                return visitor.visitUnaryOperator(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -1926,12 +1872,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCastExpression" ):
                 listener.exitCastExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCastExpression" ):
-                return visitor.visitCastExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -2029,12 +1969,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitMultiplicativeExpression" ):
                 listener.exitMultiplicativeExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMultiplicativeExpression" ):
-                return visitor.visitMultiplicativeExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -2109,12 +2043,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitAdditiveExpression" ):
                 listener.exitAdditiveExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAdditiveExpression" ):
-                return visitor.visitAdditiveExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -2188,12 +2116,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitShiftExpression" ):
                 listener.exitShiftExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitShiftExpression" ):
-                return visitor.visitShiftExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -2281,12 +2203,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitRelationalExpression" ):
                 listener.exitRelationalExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRelationalExpression" ):
-                return visitor.visitRelationalExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -2361,12 +2277,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitEqualityExpression" ):
                 listener.exitEqualityExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEqualityExpression" ):
-                return visitor.visitEqualityExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -2435,12 +2345,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitAndExpression" ):
                 listener.exitAndExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAndExpression" ):
-                return visitor.visitAndExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -2503,12 +2407,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExclusiveOrExpression" ):
                 listener.exitExclusiveOrExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExclusiveOrExpression" ):
-                return visitor.visitExclusiveOrExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -2573,12 +2471,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitInclusiveOrExpression" ):
                 listener.exitInclusiveOrExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInclusiveOrExpression" ):
-                return visitor.visitInclusiveOrExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -2642,12 +2534,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitLogicalAndExpression" ):
                 listener.exitLogicalAndExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLogicalAndExpression" ):
-                return visitor.visitLogicalAndExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -2710,12 +2596,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLogicalOrExpression" ):
                 listener.exitLogicalOrExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLogicalOrExpression" ):
-                return visitor.visitLogicalOrExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -2784,12 +2664,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConditionalExpression" ):
                 listener.exitConditionalExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConditionalExpression" ):
-                return visitor.visitConditionalExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -2861,12 +2735,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAssignmentExpression" ):
                 listener.exitAssignmentExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignmentExpression" ):
-                return visitor.visitAssignmentExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -2961,12 +2829,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitAssignmentOperator" ):
                 listener.exitAssignmentOperator(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignmentOperator" ):
-                return visitor.visitAssignmentOperator(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -3023,12 +2885,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpression" ):
-                return visitor.visitExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -3083,12 +2939,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitConstantExpression" ):
                 listener.exitConstantExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConstantExpression" ):
-                return visitor.visitConstantExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -3140,12 +2990,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclaration" ):
                 listener.exitDeclaration(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDeclaration" ):
-                return visitor.visitDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -3215,12 +3059,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitDeclarationSpecifiers" ):
                 listener.exitDeclarationSpecifiers(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDeclarationSpecifiers" ):
-                return visitor.visitDeclarationSpecifiers(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -3276,12 +3114,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclarationSpecifiers2" ):
                 listener.exitDeclarationSpecifiers2(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDeclarationSpecifiers2" ):
-                return visitor.visitDeclarationSpecifiers2(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -3350,12 +3182,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclarationSpecifier" ):
                 listener.exitDeclarationSpecifier(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDeclarationSpecifier" ):
-                return visitor.visitDeclarationSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -3438,12 +3264,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitInitDeclaratorList" ):
                 listener.exitInitDeclaratorList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInitDeclaratorList" ):
-                return visitor.visitInitDeclaratorList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -3504,12 +3324,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInitDeclarator" ):
                 listener.exitInitDeclarator(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInitDeclarator" ):
-                return visitor.visitInitDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -3576,12 +3390,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStorageClassSpecifier" ):
                 listener.exitStorageClassSpecifier(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStorageClassSpecifier" ):
-                return visitor.visitStorageClassSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -3684,12 +3492,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeSpecifier" ):
                 listener.exitTypeSpecifier(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTypeSpecifier" ):
-                return visitor.visitTypeSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -3806,12 +3608,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitStructOrUnionSpecifier" ):
                 listener.exitStructOrUnionSpecifier(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStructOrUnionSpecifier" ):
-                return visitor.visitStructOrUnionSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -3885,12 +3681,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitStructOrUnion" ):
                 listener.exitStructOrUnion(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStructOrUnion" ):
-                return visitor.visitStructOrUnion(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -3940,12 +3730,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStructDeclarationList" ):
                 listener.exitStructDeclarationList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStructDeclarationList" ):
-                return visitor.visitStructDeclarationList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4009,12 +3793,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStructDeclaration" ):
                 listener.exitStructDeclaration(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStructDeclaration" ):
-                return visitor.visitStructDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4090,12 +3868,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitSpecifierQualifierList" ):
                 listener.exitSpecifierQualifierList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSpecifierQualifierList" ):
-                return visitor.visitSpecifierQualifierList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -4166,12 +3938,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitStructDeclaratorList" ):
                 listener.exitStructDeclaratorList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStructDeclaratorList" ):
-                return visitor.visitStructDeclaratorList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -4232,12 +3998,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStructDeclarator" ):
                 listener.exitStructDeclarator(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStructDeclarator" ):
-                return visitor.visitStructDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4318,12 +4078,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnumSpecifier" ):
                 listener.exitEnumSpecifier(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnumSpecifier" ):
-                return visitor.visitEnumSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4413,12 +4167,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitEnumeratorList" ):
                 listener.exitEnumeratorList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnumeratorList" ):
-                return visitor.visitEnumeratorList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -4480,12 +4228,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitEnumerator" ):
                 listener.exitEnumerator(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnumerator" ):
-                return visitor.visitEnumerator(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -4537,12 +4279,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitEnumerationConstant" ):
                 listener.exitEnumerationConstant(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnumerationConstant" ):
-                return visitor.visitEnumerationConstant(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -4592,12 +4328,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAtomicTypeSpecifier" ):
                 listener.exitAtomicTypeSpecifier(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAtomicTypeSpecifier" ):
-                return visitor.visitAtomicTypeSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4653,12 +4383,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeQualifier" ):
                 listener.exitTypeQualifier(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTypeQualifier" ):
-                return visitor.visitTypeQualifier(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4721,12 +4445,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionSpecifier" ):
                 listener.exitFunctionSpecifier(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctionSpecifier" ):
-                return visitor.visitFunctionSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -4812,12 +4530,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitAlignmentSpecifier" ):
                 listener.exitAlignmentSpecifier(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAlignmentSpecifier" ):
-                return visitor.visitAlignmentSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -4887,12 +4599,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclarator" ):
                 listener.exitDeclarator(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDeclarator" ):
-                return visitor.visitDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5005,12 +4711,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDirectDeclarator" ):
                 listener.exitDirectDeclarator(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDirectDeclarator" ):
-                return visitor.visitDirectDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5245,12 +4945,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitVcSpecificModifer" ):
                 listener.exitVcSpecificModifer(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVcSpecificModifer" ):
-                return visitor.visitVcSpecificModifer(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5309,12 +5003,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGccDeclaratorExtension" ):
                 listener.exitGccDeclaratorExtension(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGccDeclaratorExtension" ):
-                return visitor.visitGccDeclaratorExtension(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5399,12 +5087,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitGccAttributeSpecifier" ):
                 listener.exitGccAttributeSpecifier(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGccAttributeSpecifier" ):
-                return visitor.visitGccAttributeSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5464,12 +5146,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGccAttributeList" ):
                 listener.exitGccAttributeList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGccAttributeList" ):
-                return visitor.visitGccAttributeList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5552,12 +5228,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitGccAttribute" ):
                 listener.exitGccAttribute(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGccAttribute" ):
-                return visitor.visitGccAttribute(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5637,12 +5307,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNestedParenthesesBlock" ):
                 listener.exitNestedParenthesesBlock(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNestedParenthesesBlock" ):
-                return visitor.visitNestedParenthesesBlock(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5730,12 +5394,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitPointer" ):
                 listener.exitPointer(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPointer" ):
-                return visitor.visitPointer(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5804,12 +5462,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitTypeQualifierList" ):
                 listener.exitTypeQualifierList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTypeQualifierList" ):
-                return visitor.visitTypeQualifierList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -5867,12 +5519,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitParameterTypeList" ):
                 listener.exitParameterTypeList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitParameterTypeList" ):
-                return visitor.visitParameterTypeList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -5934,12 +5580,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitParameterList" ):
                 listener.exitParameterList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitParameterList" ):
-                return visitor.visitParameterList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6006,12 +5646,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitParameterDeclaration" ):
                 listener.exitParameterDeclaration(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitParameterDeclaration" ):
-                return visitor.visitParameterDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6086,12 +5720,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitIdentifierList" ):
                 listener.exitIdentifierList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIdentifierList" ):
-                return visitor.visitIdentifierList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6149,12 +5777,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeName" ):
                 listener.exitTypeName(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTypeName" ):
-                return visitor.visitTypeName(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6216,12 +5838,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAbstractDeclarator" ):
                 listener.exitAbstractDeclarator(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAbstractDeclarator" ):
-                return visitor.visitAbstractDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6336,12 +5952,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDirectAbstractDeclarator" ):
                 listener.exitDirectAbstractDeclarator(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDirectAbstractDeclarator" ):
-                return visitor.visitDirectAbstractDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6635,12 +6245,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitTypedefName" ):
                 listener.exitTypedefName(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTypedefName" ):
-                return visitor.visitTypedefName(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6694,12 +6298,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInitializer" ):
                 listener.exitInitializer(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInitializer" ):
-                return visitor.visitInitializer(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6784,12 +6382,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitInitializerList" ):
                 listener.exitInitializerList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInitializerList" ):
-                return visitor.visitInitializerList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6864,12 +6456,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitDesignation" ):
                 listener.exitDesignation(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDesignation" ):
-                return visitor.visitDesignation(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -6915,12 +6501,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDesignatorList" ):
                 listener.exitDesignatorList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDesignatorList" ):
-                return visitor.visitDesignatorList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -6985,12 +6565,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDesignator" ):
                 listener.exitDesignator(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDesignator" ):
-                return visitor.visitDesignator(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7073,12 +6647,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitStaticAssertDeclaration" ):
                 listener.exitStaticAssertDeclaration(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStaticAssertDeclaration" ):
-                return visitor.visitStaticAssertDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7153,12 +6721,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitSqlSelectStatement" ):
                 listener.exitSqlSelectStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSqlSelectStatement" ):
-                return visitor.visitSqlSelectStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7217,12 +6779,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSqlInsertStatement" ):
                 listener.exitSqlInsertStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSqlInsertStatement" ):
-                return visitor.visitSqlInsertStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7286,12 +6842,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitSqlUpdateStatement" ):
                 listener.exitSqlUpdateStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSqlUpdateStatement" ):
-                return visitor.visitSqlUpdateStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7351,12 +6901,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitSqlDeleteStatement" ):
                 listener.exitSqlDeleteStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSqlDeleteStatement" ):
-                return visitor.visitSqlDeleteStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7413,12 +6957,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFieldList" ):
                 listener.exitFieldList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFieldList" ):
-                return visitor.visitFieldList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7483,12 +7021,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitCommaSeparatedList" ):
                 listener.exitCommaSeparatedList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCommaSeparatedList" ):
-                return visitor.visitCommaSeparatedList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7550,12 +7082,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSpaceSeparatedList" ):
                 listener.exitSpaceSeparatedList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSpaceSeparatedList" ):
-                return visitor.visitSpaceSeparatedList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7681,12 +7207,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatement" ):
-                return visitor.visitStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -7868,12 +7388,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitSqlInit" ):
                 listener.exitSqlInit(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSqlInit" ):
-                return visitor.visitSqlInit(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -7930,12 +7444,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLabeledStatement" ):
                 listener.exitLabeledStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLabeledStatement" ):
-                return visitor.visitLabeledStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8016,12 +7524,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitCompoundStatement" ):
                 listener.exitCompoundStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCompoundStatement" ):
-                return visitor.visitCompoundStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8076,12 +7578,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlockItemList" ):
                 listener.exitBlockItemList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBlockItemList" ):
-                return visitor.visitBlockItemList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8139,12 +7635,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitBlockItem" ):
                 listener.exitBlockItem(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBlockItem" ):
-                return visitor.visitBlockItem(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8201,12 +7691,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpressionStatement" ):
                 listener.exitExpressionStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpressionStatement" ):
-                return visitor.visitExpressionStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8279,12 +7763,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSelectionStatement" ):
                 listener.exitSelectionStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSelectionStatement" ):
-                return visitor.visitSelectionStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8392,12 +7870,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitIterationStatement" ):
                 listener.exitIterationStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIterationStatement" ):
-                return visitor.visitIterationStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8502,12 +7974,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitForCondition" ):
                 listener.exitForCondition(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitForCondition" ):
-                return visitor.visitForCondition(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8592,12 +8058,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitForDeclaration" ):
                 listener.exitForDeclaration(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitForDeclaration" ):
-                return visitor.visitForDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8656,12 +8116,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitForExpression" ):
                 listener.exitForExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitForExpression" ):
-                return visitor.visitForExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8738,12 +8192,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJumpStatement" ):
                 listener.exitJumpStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitJumpStatement" ):
-                return visitor.visitJumpStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8831,12 +8279,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitCompilationUnit" ):
                 listener.exitCompilationUnit(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCompilationUnit" ):
-                return visitor.visitCompilationUnit(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -8889,12 +8331,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTranslationUnit" ):
                 listener.exitTranslationUnit(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTranslationUnit" ):
-                return visitor.visitTranslationUnit(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -8954,12 +8390,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExternalDeclaration" ):
                 listener.exitExternalDeclaration(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExternalDeclaration" ):
-                return visitor.visitExternalDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -9033,12 +8463,6 @@ class cdbParser ( Parser ):
             if hasattr( listener, "exitFunctionDefinition" ):
                 listener.exitFunctionDefinition(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctionDefinition" ):
-                return visitor.visitFunctionDefinition(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -9101,12 +8525,6 @@ class cdbParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclarationList" ):
                 listener.exitDeclarationList(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDeclarationList" ):
-                return visitor.visitDeclarationList(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 

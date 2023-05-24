@@ -8,7 +8,7 @@ int main()
     int i, sum = 0;
     INSERT INTO comments (comment) VALUES ("Hello World");
     SELECT comment FROM comments INTO wlasnyCallback;
-    UPDATE comments SET comment = 5 WHERE comment = "Hello World";
+    UPDATE comments SET comment = "New comment" WHERE comment = "Hello World";
     SELECT comment FROM comments INTO wlasnyCallback;
     return 0;
 }
