@@ -3,8 +3,8 @@
 > Niniejszy projekt to transpilator nakładki na C dodającą obsługę SQL'a.
 
 ## Autorzy:
-- Mateusz Woźniak
-- Jakub Błażowski
+- Mateusz Woźniak (wozniakmat@student.agh.edu.pl)
+- Jakub Błażowski (jblazowski@student.agh.edu.pl)
 
 ## Przykładowy kod:
 
@@ -26,6 +26,8 @@ int main()
 
 ## Jak uruchomić?
 ```bash
+git clone https://github.com/matisiekpl/compiler.git
+cd compiler
 pip install -r requirements.txt
 python window.py # Uruchamia okno kompilatora
 
