@@ -54,6 +54,7 @@ def on_transpile():
     if err is not None:
         error_text.set(err.message)
         move_cursor(err.line, err.column)
+        result = 'Check errors'
 
     result_textarea.config(state=NORMAL)
     result_textarea.delete(1.0, tk.END)

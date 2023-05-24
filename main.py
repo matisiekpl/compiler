@@ -9,6 +9,7 @@ output = ""
 callbacks = ""
 callback_counter = 0
 err = None
+sql_init = False
 
 
 class SyntaxErr:
@@ -19,9 +20,10 @@ class SyntaxErr:
 
 
 def transpile(input_stream):
-    global output, callback_counter, err, callbacks
+    global output, callback_counter, err, callbacks, sql_init
     output = ''
     callbacks = ''
+    sql_init = False
     callback_counter = 0
     lexer = cdbLexer(InputStream(input_stream))
     stream = CommonTokenStream(lexer)
@@ -76,29 +78,33 @@ def transpile(input_stream):
 
         def enterSqlSelectStatement(self, ctx: cdbParser.SqlSelectStatementContext):
             global output, callback_counter, callbacks
-            fields = ctx.children[1].getText()
-            table = ctx.children[3].getText()
-            callback = ctx.children[5].getText()
-            if 'int ' + callback not in input_stream:
-                callback = f"callback{callback_counter}"
-                callbacks += f"""
-                int callback{callback_counter}(void *NotUsed, int argc, char **argv, 
-                            char **azColName) {{
-            NotUsed = 0;
-            for (int i = 0; i < argc; i++) {{
-                printf("%s = %s\\n", azColName[i], argv[i] ? argv[i] : "NULL");
-            }}
-            printf("\\n");return 0;}}\n"""
-                callback_counter += 1
-            line = ctx.getText()
-            line.split('(')
-            output += f"""
-                    sql = sqlite3_mprintf("SELECT {fields} FROM {table};");
-                    rc = sqlite3_exec(db, sql, {callback}, 0, &zErrMsg);
-                    """
+            try:
+                fields = ctx.children[1].getText()
+                table = ctx.children[3].getText()
+                callback = ctx.children[5].getText()
+                if 'int ' + callback not in input_stream:
+                    callback = f"callback{callback_counter}"
+                    callbacks += f"""
+                                int callback{callback_counter}(void *NotUsed, int argc, char **argv, 
+                                            char **azColName) {{
+                            NotUsed = 0;
+                            for (int i = 0; i < argc; i++) {{
+                                printf("%s = %s\\n", azColName[i], argv[i] ? argv[i] : "NULL");
+                            }}
+                            printf("\\n");return 0;}}\n"""
+                    callback_counter += 1
+                line = ctx.getText()
+                line.split('(')
+                output += f"""
+                                    sql = sqlite3_mprintf("SELECT {fields} FROM {table};");
+                                    rc = sqlite3_exec(db, sql, {callback}, 0, &zErrMsg);
+                                    """
+            except:
+                print()
 
         def enterSqlInit(self, ctx: cdbParser.SqlInitContext):
-            global output
+            global output, sql_init
+            sql_init = True
             output += """
             sqlite3 *db;
             int rc;
@@ -154,6 +160,10 @@ def transpile(input_stream):
     walker.walk(listener, tree)
 
     result = headers + callbacks + output
+
+    if not sql_init:
+        err = SyntaxErr(0, 0, 'There is no sqlInit;')
+        print(err.message)
 
     print(f'🤖 Using {callback_counter} callbacks')
     print(f'🚀 Transpiling done')
